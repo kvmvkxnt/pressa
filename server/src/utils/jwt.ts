@@ -1,5 +1,4 @@
-import pkg from 'jsonwebtoken';
-const { sign, verify } = pkg;
+import { sign, verify } from 'jsonwebtoken';
 import { SECRET } from '../config/index.js';
 
 export default {
