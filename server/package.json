@@ -7,6 +7,7 @@
   "private": true,
   "scripts": {
     "ts:watch": "tsc -w",
+    "heroku-prebuild": "yarn install --production=false",
     "node:dev": "cross-env NODE_ENV=development nodemon",
     "start": "concurrently \"yarn ts:watch\" \"yarn node:dev\"",
     "build": "tsc --build && cross-env NODE_ENV=production node build/index.js"
