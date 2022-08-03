@@ -1,0 +1,30 @@
+.divider {
+  margin-top: 40px;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+
+    .divider__p {
+      font-family: 'SF Pro Display';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      column-gap: 10px;
+      display: flex;
+      color: rgba(0, 0, 0, 0.5);  
+      text-decoration: none;
+      align-items: center;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .divider__p:last-child {
+      color: rgba(0,0,0,1);
+    }
+  }
+} 

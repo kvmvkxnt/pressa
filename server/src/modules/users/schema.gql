@@ -1,0 +1,15 @@
+type Query {
+  users(userId: String): [User],
+}
+
+type User {
+  userId: String!,
+  username: String!,
+  avatar: String
+}
+
+type Mutation {
+  login(username: String!, password: String!): RegisterAndLoginResponse!,
+  addUser(username: String! password: String!, avatar: String): RegisterAndLoginResponse!,
+  deleteUser(userId: String!): Response!
+}

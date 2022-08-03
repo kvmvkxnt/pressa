@@ -1,0 +1,125 @@
+.login {
+  padding: 60px 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #logo {
+      align-self: start;
+      margin-bottom: 167px;
+    }
+
+    .login__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 500px;
+      width: 100%;
+      margin-bottom: 20px;
+
+      .login__heading {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 56px;
+        color: #222222;
+        margin-bottom: 70px;
+        align-self: start;
+      }
+
+     .login__block {
+        width: 100%;
+        position: relative;
+
+        .left-icon {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font: 0;
+          color: rgba(0, 0, 0, 0.5);
+          transform: translate(20px, 23px);
+          font-size: 18px;
+        }
+
+        .login__input {
+          border: 1px solid rgba(15, 24, 38, 0.2);
+          border-radius: 4px;
+          padding: 22px 0;
+          padding-left: 50px;
+          padding-right: 40px;
+          width: 100%;
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 21px;
+          color: #000000;
+        }
+
+        .login__button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          transform: translateX(-15px);
+          background-color: transparent;
+          border: none;
+          padding: 0;
+          margin: 0;
+          font-size: 18px;
+          line-height: 21px;
+          color: #000000;
+        }
+      } 
+
+      .login__block + .login__block {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      .login__link {
+        text-decoration: none;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000000;
+        align-self: end;
+        margin-bottom: 30px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .login__submit {
+        margin: 0;
+        padding: 0;
+        border: none;
+        padding: 16px 50px;
+        background-color: #006AFF;
+        border-radius: 4px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 40px;
+        color: #FFFFFF;
+        cursor: pointer;
+      }
+    }
+
+    .login__error {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: red;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.about-us {
+  margin-bottom: 191px;
+  
+  &__inner {
+    .about-us__title {
+      font-family: 'SF Pro Display';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 48px;
+      color: #333333;
+      margin-bottom: 40px;
+    }  
+
+    .about-us__text {
+      font-family: 'SF Pro Display';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 40px;
+    }
+
+    .about-us__text + .about-us__text {
+      margin-top: 40px;
+    }
+  }
+}

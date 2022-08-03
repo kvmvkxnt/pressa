@@ -1,0 +1,27 @@
+type Query {
+  comments(eventId: Int!): [Comment],
+  subcomments(commentId: Int!): [SubComment]
+}
+
+type Comment {
+  commentId: Int,
+  eventId: Int,
+  commentTitle: String,
+  user: User,
+  createdAt: DateTime
+}
+
+type SubComment {
+  subCommentId: Int,
+  subCommentTitle: String,
+  user: User,
+  createdAt: DateTime,
+  commentId: Int
+}
+
+type Mutation {
+  addComment(eventId: Int!, title: String!): Response!,
+  deleteComment(commentId: Int!): Response!,
+  addSubComment(commentId: Int!, title: String!): Response!,
+  deleteSubComment(subCommentId: Int!): Response!
+}

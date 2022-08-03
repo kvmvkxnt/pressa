@@ -1,0 +1,22 @@
+type Query {
+  categories: [Category],
+  subCategories(subCategoryId: Int): [SubCategory]
+}
+
+type Category {
+  categoryId: Int,
+  title: String,
+  subCategories: [SubCategory]
+}
+
+type SubCategory {
+  subCategoryId: Int,
+  title: String,
+  categoryId: Int
+}
+
+type Mutation {
+  addCategory(categoryTitle: String!): Response!,
+  deleteCategory(categoryId: Int!): Response!,
+  putCategory(categoryId: Int!, categoryTitle: Int!): Response!
+}
