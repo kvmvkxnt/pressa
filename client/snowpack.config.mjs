@@ -7,9 +7,7 @@ export default {
   plugins: [
     '@snowpack/plugin-react-refresh',
     '@snowpack/plugin-sass',
-    ["snowpack-plugin-raw-file-loader", {
-      exts: [".eot", ".svg"]
-    }],
+    ["snowpack-plugin-raw-file-loader"],
     [
       '@snowpack/plugin-typescript',
       {

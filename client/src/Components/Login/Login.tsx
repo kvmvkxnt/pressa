@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../../api/index.js";
-import { addTokenAction } from "../../Store/token/actions.js";
-import { removeCookie } from "../../utils/cookies.js";
+import { addTokenAction, removeTokenAction } from "../../Store/token/actions.js";
+import { addUserAction, removeUserAction } from "../../Store/user/actions.js";
 import Logo from "../Lib/Logo";
 import "./Login.scss";
 
@@ -15,12 +15,17 @@ function Login() {
   const token = useSelector((state: any) => state.token.token);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const user = useSelector((state: any) => state.user.user);
 
   useEffect(() => {
     if (token) {
-      removeCookie('token');
+      dispatch(removeTokenAction())
     }
-  }, [token]);
+
+    if (user) {
+      dispatch(removeUserAction())
+    }
+  }, [token, user]);
 
   async function handleSubmit(evt: any) {
     evt.preventDefault();
@@ -37,6 +42,7 @@ function Login() {
         setError(data.data.login.message);
       } else {
         dispatch(addTokenAction(data.data.login.token));
+        dispatch(addUserAction(data.data.login.data));
         navigate(-1);
       }
     }

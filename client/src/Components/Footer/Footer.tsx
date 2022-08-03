@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Icons from "../Lib/Icons";
 import Logo from "../Lib/Logo";
 import './Footer.scss';
@@ -8,11 +9,11 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         <div className="footer__inner">
-          <Logo fs={30} lh={36} cl="white"/>
+          <Logo fs={30} lh={36} cl="white" />
 
           <ul className="footer__list">
-            <li className="footer__item"><a href="#" className="footer__link">О нас</a></li>
-            <li className="footer__item"><a href="#" className="footer__link">Вопросы и ответы</a></li>
+            <li className="footer__item"><Link to="/about" className="footer__link">О нас</Link></li>
+            <li className="footer__item"><Link to="/faq" className="footer__link">Вопросы и ответы</Link></li>
           </ul>
 
           <div className="footer__contacts">

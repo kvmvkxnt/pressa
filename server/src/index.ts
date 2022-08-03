@@ -37,6 +37,7 @@ if (isProduction) {
   config = developmentConfig;
 }
 
+console.log(config, isProduction, process.env);
 console.log(`${FgYellow}%s${Reset}`, 'ℹ️  Configuration info');
 console.log(`${FgYellow}%s${Reset}`, `ℹ️  Port: ${config.port}`);
 console.log(`${FgYellow}%s${Reset}`, `ℹ️  allowedOrigin: ${config.allowedOrigin}`);
@@ -55,8 +56,11 @@ async function startApolloServer() {
   // if server is running in production,
   // the client assembly is served as a directory with static files
   if (isProduction) {
-    app.use(express.static(path.join(__dirname, '../../client/build')))
+    console.log(path.join(__dirname, '../../client/build'))
+    app.use(express.static(path.join(__dirname, '../../client/build')));
   }
+
+  app.use(express.static(path.join(__dirname, '../uploads')));
 
   // routes
   app.use('/api', apiRoutes);

@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "concurrently \"yarn --cwd client start\" \"yarn --cwd server start\"",
-    "build": "yarn --cwd client install --production=false && yarn --cwd client build && yarn --cwd install --production=false && yarn --cwd server build"
+    "build": "yarn --cwd client install --production=false && yarn --cwd client build && yarn --cwd server build"
   },
   "dependencies": {
     "concurrently": "^7.3.0"

@@ -1,13 +1,12 @@
 import React from "react";
 import Icons from "../Lib/Icons";
 import "./Card.scss";
-import card1 from '../../Assets/Images/card1.png';
 
 function Card() {
   return (
     <li className="card">
       <a href="#" className="card__link">
-        <img src={card1} alt="Alt" className="card__img" />
+        <img src='/dist/Assets/Images/card1.png' alt="Alt" className="card__img" />
 
         <div className="card__info">
           <h3 className="card__title">Alisher Isaevdan biznes va IT bo’yicha master klass</h3>

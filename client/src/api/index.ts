@@ -19,6 +19,11 @@ const login = async (username: string, password: string) => {
               status
               message
               token
+              data {
+                userId
+                username
+                avatar
+              }
             }
           }
         `,

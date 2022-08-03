@@ -5,14 +5,16 @@ import { Route, Routes } from 'react-router-dom';
 import About from './Components/About/About';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
+import Place from './Components/Place/Place';
 //import { addTokenAction, removeTokenAction } from './Store/token/actions.js';
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path='login' element={<Login />} />
-      <Route path='about' element={<About />} />
+      <Route path='/login' element={<Login />} />
+      <Route path='/about' element={<About />} />
+      <Route path='/place' element={<Place />} />
     </Routes>
   )
 }
