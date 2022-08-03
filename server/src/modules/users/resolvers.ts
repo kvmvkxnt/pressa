@@ -42,7 +42,7 @@ export default {
       for (let value in context) {
         token += context[value];
       }
-      const deletable: string | JwtPayload | any = jwt.verify(token);
+      const deletable: any = jwt.verify(token);
       const deletableUid: string = deletable.userId;
       if (deletableUid === args.userId) {
         let user = await model.DELETE_USER(args.userId);

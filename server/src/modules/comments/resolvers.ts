@@ -42,7 +42,7 @@ export default {
       for (let value in context) {
         token += context[value];
       }
-      const obj: string | JwtPayload | any = jwt.verify(token);
+      const obj: any = jwt.verify(token);
       args.userId = obj.userId;
 
       if (!token) {
@@ -73,7 +73,7 @@ export default {
       for (let value in context) {
         token += context[value];
       }
-      const obj: string | JwtPayload | any = jwt.verify(token);
+      const obj: any = jwt.verify(token);
       args.userId = obj.userId;
 
       if (!token) {
@@ -104,7 +104,7 @@ export default {
       for (let value in context) {
         token += context[value];
       }
-      const obj: string | JwtPayload | any = jwt.verify(token);
+      const obj: any = jwt.verify(token);
       args.userId = obj.userId;
 
       if (!token) {
@@ -135,7 +135,7 @@ export default {
       for (let value in context) {
         token += context[value];
       }
-      const obj: string | JwtPayload | any = jwt.verify(token);
+      const obj: any = jwt.verify(token);
       args.userId = obj.userId;
 
       if (!token) {
