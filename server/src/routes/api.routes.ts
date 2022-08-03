@@ -4,7 +4,7 @@ import { verifyAndCreateMessage } from "../middlewares/verifyAndCreateMessage.js
 // service
 import { sendMessage } from "../services/api.services.js";
 
-const router = Router();
+const router: Router = Router();
 
 router.post('/', verifyAndCreateMessage, sendMessage);
 

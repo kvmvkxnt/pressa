@@ -14,7 +14,7 @@ import onError from './utils/onError.js';
 import { FgGreen, FgYellow, Reset } from './utils/colors.js';
 import { createServer } from 'http';
 import { ApolloServer } from 'apollo-server-express';
-import { ApolloServerPluginDrainHttpServer, ApolloServerPluginLandingPageGraphQLPlayground, ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
+import { ApolloServerPluginDrainHttpServer, ApolloServerPluginLandingPageLocalDefault } from 'apollo-server-core';
 
 import schema from './modules/index.js';
 
@@ -76,8 +76,8 @@ async function startApolloServer() {
 
   const server = new ApolloServer({
     schema,
-    context: ({ req }) => {
-      return req.headers?.token;
+    context: (ctx: { req: any }) => {
+      return ctx.req.headers?.token;
     },
     introspection: true,
     csrfPrevention: true,

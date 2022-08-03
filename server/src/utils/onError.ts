@@ -3,7 +3,7 @@ import { FgRed, Reset } from "./colors.js";
 import fs from 'fs';
 import path from "path";
 
-const onError: ErrorRequestHandler = (err, req, res, _) => {
+const onError: ErrorRequestHandler = (err: any, req: any, res: any, _: any) => {
   console.log(`${FgRed}%s${Reset}`, err);
 
   if (err.status != 500) {

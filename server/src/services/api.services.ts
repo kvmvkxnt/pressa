@@ -1,6 +1,6 @@
 import { Route } from "../types";
 
-export const sendMessage: Route = (_, res, next) => {
+export const sendMessage: Route = (_: any, res: any, next: any) => {
   try {
     // extracting message from 'res.locals'
     const { message } = res.locals;
