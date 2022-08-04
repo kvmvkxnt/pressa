@@ -26,7 +26,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 
 // selecting settings
 type Config = {
-  port: number,
+  port: number | string,
   allowedOrigin: string
 }
 
@@ -36,11 +36,6 @@ if (isProduction) {
 } else {
   config = developmentConfig;
 }
-
-console.log(config, isProduction, process.env);
-console.log(`${FgYellow}%s${Reset}`, 'ℹ️  Configuration info');
-console.log(`${FgYellow}%s${Reset}`, `ℹ️  Port: ${config.port}`);
-console.log(`${FgYellow}%s${Reset}`, `ℹ️  allowedOrigin: ${config.allowedOrigin}`);
 
 async function startApolloServer() {
   // creating app
@@ -56,7 +51,6 @@ async function startApolloServer() {
   // if server is running in production,
   // the client assembly is served as a directory with static files
   if (isProduction) {
-    console.log(path.join(__dirname, '../../client/build'))
     app.use(express.static(path.join(__dirname, '../../client/build')));
   }
 
