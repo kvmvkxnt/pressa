@@ -19,6 +19,6 @@ export const developmentConfig = {
 };
 
 export const productionConfig = {
-  port: 4000,
-  allowedOrigin: 'http://localhost:4000'
+  port: process.env.PORT || 4000,
+  allowedOrigin: `http://localhost:${process.env.PORT || 4000}`
 };
