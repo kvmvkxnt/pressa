@@ -1,7 +1,0 @@
-node_modules
-
-build
-yarn-error.log*
-
-.snowpack
-.DS_Store
